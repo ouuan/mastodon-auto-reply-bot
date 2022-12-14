@@ -20,7 +20,7 @@ node .
 
 ## Config
 
-Example `config.yml`: (See also [Status - Mastodon documentation](https://docs.joinmastodon.org/entities/Status/))
+Example `config.yml`: (See also [Status - Mastodon documentation](https://docs.joinmastodon.org/entities/Status/) and [Status | masto](https://neet.github.io/masto.js/interfaces/Status.html))
 
 ```yaml
 url: https://mastodon.social/
@@ -39,14 +39,14 @@ rules:
       - path: visibility
         type: string
         match: '^public$'
-      - path: account.followers_count
+      - path: account.followersCount
         type: number
         min: 1
         max: 5
       - path: account.bot
         type: boolean
         is: false
-      - path: in_reply_to_id
+      - path: inReplyToId
         type: 'null'
     reply: Nice to meet you!
     visibility: direct  # the visibility of the reply
