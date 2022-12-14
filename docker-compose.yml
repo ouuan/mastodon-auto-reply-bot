@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  mastodon-auto-reply-bot:
+    image: ouuan/mastodon-auto-reply-bot
+    restart: always
+    volumes:
+      - ./config.yml:/app/config.yml:ro
