@@ -37,8 +37,9 @@ rules:
         type: string
         match: '[Hh]ello'  # regular expression
       - path: visibility
+        invert: true  # reply only when the condition is not met
         type: string
-        match: '^public$'
+        match: private
       - path: account.followersCount
         type: number
         min: 1

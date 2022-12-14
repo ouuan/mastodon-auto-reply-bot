@@ -44,18 +44,19 @@ function matchNullFilter(value: any) {
 function matchRule(status: Status, rule: Rule) {
   for (const filter of rule.filters) {
     const value = access(status, filter.path);
+    const { invert } = filter;
     switch (filter.type) {
       case 'string':
-        if (!matchStringFilter(value, filter)) return false;
+        if (matchStringFilter(value, filter) === invert) return false;
         break;
       case 'number':
-        if (!matchNumberFilter(value, filter)) return false;
+        if (matchNumberFilter(value, filter) === invert) return false;
         break;
       case 'boolean':
-        if (!matchBooleanFilter(value, filter)) return false;
+        if (matchBooleanFilter(value, filter) === invert) return false;
         break;
       case 'null':
-        if (!matchNullFilter(value)) return false;
+        if (matchNullFilter(value) === invert) return false;
         break;
       default:
         exhaustiveCheck(filter);

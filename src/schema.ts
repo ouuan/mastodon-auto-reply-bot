@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 const BaseFilter = z.object({
   path: z.string(),
+  invert: z.boolean().default(false),
 });
 
 export const StringFilter = BaseFilter.extend({
