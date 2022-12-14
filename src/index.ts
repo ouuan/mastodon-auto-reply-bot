@@ -84,12 +84,13 @@ async function main() {
     console.log(`status received: ${status.id}`);
     for (const rule of rules) {
       if (matchRule(status, rule)) {
+        const reply = `${rule.at ? `@${status.account.acct} ` : ''}${rule.reply}`;
         masto.statuses.create({
-          status: rule.reply,
+          status: reply,
           inReplyToId: status.id,
           visibility: rule.visibility,
-        }).then((reply) => {
-          console.log(`replied ${reply.id} to ${status.id}: ${rule.reply}`);
+        }).then((replyStatus) => {
+          console.log(`replied ${replyStatus.id} to ${status.id}: ${reply}`);
         }).catch((e) => {
           console.error(`failed to reply to ${status.id}: ${e}`);
         });

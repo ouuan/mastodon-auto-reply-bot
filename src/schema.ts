@@ -33,6 +33,7 @@ export const Rule = z.object({
   ])),
   reply: z.string(),
   visibility: z.enum(['public', 'unlisted', 'private', 'direct']).default('public'),
+  at: z.boolean().default(true),
 });
 
 export const Config = z.object({

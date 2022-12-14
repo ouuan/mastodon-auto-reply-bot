@@ -27,14 +27,15 @@ url: https://mastodon.social/
 accessToken: TOKEN
 rules:
   - filters:
-      - path: content
+      - path: content  # path in the Status API entity
         type: string
         match: bot
     reply: Hello! I'm an auto-reply bot.
+    at: false  # no @username in the reply
   - filters:
       - path: content
         type: string
-        match: '[Hh]ello'
+        match: '[Hh]ello'  # regular expression
       - path: visibility
         type: string
         match: '^public$'
@@ -48,5 +49,5 @@ rules:
       - path: in_reply_to_id
         type: 'null'
     reply: Nice to meet you!
-    visibility: direct
+    visibility: direct  # the visibility of the reply
 ```
