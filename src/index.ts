@@ -3,6 +3,7 @@ import { login, Status } from 'masto';
 import yaml from 'yaml';
 import { readFile } from 'fs/promises';
 import { fromZodError } from 'zod-validation-error';
+import { exhaustiveCheck } from 'ts-exhaustive-check';
 
 import {
   Config,
@@ -34,20 +35,28 @@ function matchBooleanFilter(value: any, filter: BooleanFilter) {
   return typeof value === 'boolean' && value === filter.is;
 }
 
+function matchNullFilter(value: any) {
+  return value === null;
+}
+
 function matchRule(status: Status, rule: Rule) {
-  for (const filter of rule.stringFilters || []) {
-    if (!matchStringFilter(access(status, filter.path), filter)) {
-      return false;
-    }
-  }
-  for (const filter of rule.numberFilters || []) {
-    if (!matchNumberFilter(access(status, filter.path), filter)) {
-      return false;
-    }
-  }
-  for (const filter of rule.booleanFilters || []) {
-    if (!matchBooleanFilter(access(status, filter.path), filter)) {
-      return false;
+  for (const filter of rule.filters) {
+    const value = access(status, filter.path);
+    switch (filter.type) {
+      case 'string':
+        if (!matchStringFilter(value, filter)) return false;
+        break;
+      case 'number':
+        if (!matchNumberFilter(value, filter)) return false;
+        break;
+      case 'boolean':
+        if (!matchBooleanFilter(value, filter)) return false;
+        break;
+      case 'null':
+        if (!matchNullFilter(value)) return false;
+        break;
+      default:
+        exhaustiveCheck(filter);
     }
   }
   return true;

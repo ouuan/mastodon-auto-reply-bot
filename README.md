@@ -26,22 +26,27 @@ Example `config.yml`: (See also [Status - Mastodon documentation](https://docs.j
 url: https://mastodon.social/
 accessToken: TOKEN
 rules:
-  - stringFilters:
+  - filters:
       - path: content
+        type: string
         match: bot
     reply: Hello! I'm an auto-reply bot.
-  - stringFilters:
+  - filters:
       - path: content
+        type: string
         match: '[Hh]ello'
       - path: visibility
+        type: string
         match: '^public$'
-    numberFilters:
       - path: account.followers_count
-        min: 0
+        type: number
+        min: 1
         max: 5
-    booleanFilters:
       - path: account.bot
+        type: boolean
         is: false
+      - path: in_reply_to_id
+        type: 'null'
     reply: Nice to meet you!
     visibility: direct
 ```
