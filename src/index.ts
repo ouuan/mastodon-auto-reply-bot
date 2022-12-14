@@ -85,7 +85,7 @@ async function main() {
   const queue = async.queue(async (reply: Parameters<typeof masto.statuses.create>[0]) => {
     try {
       const replyStatus = await masto.statuses.create(reply);
-      console.log(`replied ${replyStatus.id} to ${reply.inReplyToId}: ${reply}`);
+      console.log(`replied ${replyStatus.id} to ${reply.inReplyToId}: ${reply.status}`);
     } catch (e) {
       console.error(`failed to reply to ${reply.inReplyToId}: ${e}`);
     }
