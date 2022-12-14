@@ -20,7 +20,7 @@ node .
 
 ## Config
 
-Example `config.yml`:
+Example `config.yml`: (See also [Status - Mastodon documentation](https://docs.joinmastodon.org/entities/Status/))
 
 ```yaml
 url: https://mastodon.social/
