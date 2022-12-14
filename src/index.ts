@@ -18,7 +18,16 @@ function matchStringFilter(value: any, filter: StringFilter) {
 }
 
 function matchNumberFilter(value: any, filter: NumberFilter) {
-  return typeof value === 'number' && value >= filter.min && value <= filter.max;
+  if (typeof value !== 'number') {
+    return false;
+  }
+  if (filter.min !== undefined && value < filter.min) {
+    return false;
+  }
+  if (filter.max !== undefined && value > filter.max) {
+    return false;
+  }
+  return true;
 }
 
 function matchBooleanFilter(value: any, filter: BooleanFilter) {

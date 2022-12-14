@@ -9,8 +9,8 @@ export const StringFilter = BaseFilter.extend({
 });
 
 export const NumberFilter = BaseFilter.extend({
-  min: z.number(),
-  max: z.number(),
+  min: z.number().optional(),
+  max: z.number().optional(),
 });
 
 export const BooleanFilter = BaseFilter.extend({
