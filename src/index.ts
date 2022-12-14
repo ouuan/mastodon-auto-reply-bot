@@ -69,6 +69,8 @@ async function main() {
 
   const stream = await masto.stream.streamCommunityTimeline();
 
+  console.log('Connected');
+
   stream.on('update', async (status) => {
     console.log(`status received: ${status.id}`);
     for (const rule of rules) {
