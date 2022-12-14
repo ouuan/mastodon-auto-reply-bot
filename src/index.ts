@@ -4,6 +4,8 @@ import yaml from 'yaml';
 import { readFile } from 'fs/promises';
 import { fromZodError } from 'zod-validation-error';
 import { exhaustiveCheck } from 'ts-exhaustive-check';
+import async from 'async';
+import sleep from 'sleep-promise';
 
 import {
   Config,
@@ -80,19 +82,25 @@ async function main() {
 
   console.log('Connected');
 
+  const queue = async.queue(async (reply: Parameters<typeof masto.statuses.create>[0]) => {
+    try {
+      const replyStatus = await masto.statuses.create(reply);
+      console.log(`replied ${replyStatus.id} to ${reply.inReplyToId}: ${reply}`);
+    } catch (e) {
+      console.error(`failed to reply to ${reply.inReplyToId}: ${e}`);
+    }
+    await sleep(10000); // avoid replying too fast
+  });
+
   stream.on('update', async (status) => {
     console.log(`status received: ${status.id}`);
     for (const rule of rules) {
       if (matchRule(status, rule)) {
         const reply = `${rule.at ? `@${status.account.acct} ` : ''}${rule.reply}`;
-        masto.statuses.create({
+        queue.push({
           status: reply,
           inReplyToId: status.id,
           visibility: rule.visibility,
-        }).then((replyStatus) => {
-          console.log(`replied ${replyStatus.id} to ${status.id}: ${reply}`);
-        }).catch((e) => {
-          console.error(`failed to reply to ${status.id}: ${e}`);
         });
         break;
       }
