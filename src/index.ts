@@ -65,16 +65,14 @@ function matchRule(status: Status, rule: Rule) {
 }
 
 async function main() {
-  const config: Config = yaml.parse(await readFile('config.yml', 'utf-8'));
+  const parseResult = Config.safeParse(yaml.parse(await readFile('config.yml', 'utf-8')));
 
-  try {
-    Config.parse(config);
-  } catch (e) {
-    console.error(fromZodError(e));
+  if (!parseResult.success) {
+    console.error(fromZodError(parseResult.error));
     process.exit(1);
   }
 
-  const { url, accessToken, rules } = config;
+  const { url, accessToken, rules } = parseResult.data;
 
   const masto = await login({ url, accessToken });
 
@@ -96,9 +94,8 @@ async function main() {
     console.log(`status received: ${status.id}`);
     for (const rule of rules) {
       if (matchRule(status, rule)) {
-        const reply = `${rule.at ? `@${status.account.acct} ` : ''}${rule.reply}`;
         queue.push({
-          status: reply,
+          status: `${rule.at ? `@${status.account.acct} ` : ''}${rule.reply}`,
           inReplyToId: status.id,
           visibility: rule.visibility,
         });
