@@ -22,6 +22,7 @@ export const Rule = z.object({
   numberFilters: z.array(NumberFilter).optional(),
   booleanFilters: z.array(BooleanFilter).optional(),
   reply: z.string(),
+  visibility: z.enum(['public', 'unlisted', 'private', 'direct']).default('public'),
 });
 
 export const Config = z.object({

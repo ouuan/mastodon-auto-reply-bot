@@ -43,4 +43,5 @@ rules:
       - path: account.bot
         is: false
     reply: Nice to meet you!
+    visibility: direct
 ```

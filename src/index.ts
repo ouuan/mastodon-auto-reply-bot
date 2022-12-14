@@ -76,6 +76,7 @@ async function main() {
         masto.statuses.create({
           status: rule.reply,
           inReplyToId: status.id,
+          visibility: rule.visibility,
         }).then((reply) => {
           console.log(`replied ${reply.id} to ${status.id}: ${rule.reply}`);
         }).catch((e) => {
