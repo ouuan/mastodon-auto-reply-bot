@@ -16,7 +16,7 @@ specifiers:
   unbuild: 1.1.1
   yaml: 2.2.1
   zod: 3.20.6
-  zod-validation-error: 0.2.2
+  zod-validation-error: 0.3.1
 
 dependencies:
   async: 3.2.4
@@ -25,7 +25,7 @@ dependencies:
   ts-exhaustive-check: 1.0.0
   yaml: 2.2.1
   zod: 3.20.6
-  zod-validation-error: 0.2.2_zod@3.20.6
+  zod-validation-error: 0.3.1_zod@3.20.6
 
 devDependencies:
   '@types/async': 3.2.16
@@ -2953,8 +2953,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zod-validation-error/0.2.2_zod@3.20.6:
-    resolution: {integrity: sha512-CD7i+LIxdskkgxhVOsCr5F1Q4kbnbpgQGBQXdNdFxKCecS4OFseekJ5gOkNu/Y6rapQ4Rj7XBYMckBhyOZm+lQ==}
+  /zod-validation-error/0.3.1_zod@3.20.6:
+    resolution: {integrity: sha512-3m7VcE4YT3ZdGJoYBZnLt8E1S/r8zPFNDWMc2njaeC7Vxe5FQbgIiwHoerSkli5PgsUyxWQhpFxEAJXkBJvoDg==}
     engines: {node: ^14.17 || >=16.0.0}
     peerDependencies:
       zod: ^3.18.0
