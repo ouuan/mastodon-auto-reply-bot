@@ -23,8 +23,8 @@
     "zod-validation-error": "0.2.2"
   },
   "devDependencies": {
-    "@types/async": "^3.2.16",
-    "@types/node": "^18.11.15",
+    "@types/async": "3.2.16",
+    "@types/node": "18.13.0",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "eslint": "^8.29.0",
