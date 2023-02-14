@@ -1,0 +1,10 @@
+{
+  "extends": "@ouuan/tsconfig-base",
+  "compilerOptions": {
+    "baseUrl": "./"
+  },
+  "include": [
+    "*.ts",
+    "src/**/*.ts"
+  ]
+}
