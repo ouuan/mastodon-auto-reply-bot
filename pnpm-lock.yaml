@@ -1,14 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@ouuan/eslint-config-ts': ^1.2.2
   '@types/async': 3.2.16
   '@types/node': 18.13.0
-  '@typescript-eslint/eslint-plugin': 5.51.0
-  '@typescript-eslint/parser': 5.51.0
   async: 3.2.4
   eslint: 8.34.0
-  eslint-config-airbnb-base: 15.0.0
-  eslint-plugin-import: 2.27.5
   masto: 4.11.1
   sleep-promise: 9.1.0
   ts-exhaustive-check: 1.0.0
@@ -28,13 +25,10 @@ dependencies:
   zod-validation-error: 0.3.1_zod@3.20.6
 
 devDependencies:
+  '@ouuan/eslint-config-ts': 1.2.2_7kw3g6rralp5ps6mg3uyzz6azm
   '@types/async': 3.2.16
   '@types/node': 18.13.0
-  '@typescript-eslint/eslint-plugin': 5.51.0_z4swst3wuuqk4hlme4ajzslgh4
-  '@typescript-eslint/parser': 5.51.0_7kw3g6rralp5ps6mg3uyzz6azm
   eslint: 8.34.0
-  eslint-config-airbnb-base: 15.0.0_mvgyw3chnqkp6sgfmmtihyjpnm
-  eslint-plugin-import: 2.27.5_62tsymtiqxebhmxuag4hg3gx2m
   typescript: 4.9.5
   unbuild: 1.1.1
 
@@ -737,6 +731,24 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.14.0
+    dev: true
+
+  /@ouuan/eslint-config-ts/1.2.2_7kw3g6rralp5ps6mg3uyzz6azm:
+    resolution: {integrity: sha512-lqbfoB0lu4T72yr/UNL2VLdRwd36EC9G2+Y/jvsjkWnJjYjCOdbebtAMpIcFlp7gwfT7o+bfvwGPN5DW9AnC1w==}
+    peerDependencies:
+      eslint: '>=8'
+      typescript: '>=4'
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.51.0_z4swst3wuuqk4hlme4ajzslgh4
+      '@typescript-eslint/parser': 5.51.0_7kw3g6rralp5ps6mg3uyzz6azm
+      eslint: 8.34.0
+      eslint-config-airbnb-base: 15.0.0_mvgyw3chnqkp6sgfmmtihyjpnm
+      eslint-plugin-import: 2.27.5_62tsymtiqxebhmxuag4hg3gx2m
+      typescript: 4.9.5
+    transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
     dev: true
 
   /@rollup/plugin-alias/4.0.2_rollup@3.15.0:

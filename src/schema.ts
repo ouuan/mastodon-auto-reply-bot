@@ -1,3 +1,5 @@
+/* eslint-disable no-redeclare */
+
 import { z } from 'zod';
 
 const BaseFilter = z.object({
