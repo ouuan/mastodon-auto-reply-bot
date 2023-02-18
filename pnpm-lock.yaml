@@ -4,7 +4,7 @@ specifiers:
   '@ouuan/eslint-config-ts': 1.2.2
   '@ouuan/tsconfig-base': 0.3.0
   '@types/async': 3.2.18
-  '@types/node': 18.13.0
+  '@types/node': 18.14.0
   async: 3.2.4
   eslint: 8.34.0
   masto: 4.11.1
@@ -29,7 +29,7 @@ devDependencies:
   '@ouuan/eslint-config-ts': 1.2.2_7kw3g6rralp5ps6mg3uyzz6azm
   '@ouuan/tsconfig-base': 0.3.0
   '@types/async': 3.2.18
-  '@types/node': 18.13.0
+  '@types/node': 18.14.0
   eslint: 8.34.0
   typescript: 4.9.5
   unbuild: 1.1.2
@@ -672,8 +672,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node/18.13.0:
-    resolution: {integrity: sha512-gC3TazRzGoOnoKAhUx+Q0t8S9Tzs74z7m0ipwGpSqQrleP14hKxP4/JUeEQcD3W1/aIpnWl8pHowI7WokuZpXg==}
+  /@types/node/18.14.0:
+    resolution: {integrity: sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==}
     dev: true
 
   /@types/resolve/1.20.2:
