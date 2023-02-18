@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@ouuan/eslint-config-ts': ^1.2.2
-  '@ouuan/tsconfig-base': ^0.3.0
+  '@ouuan/eslint-config-ts': 1.2.2
+  '@ouuan/tsconfig-base': 0.3.0
   '@types/async': 3.2.18
   '@types/node': 18.13.0
   async: 3.2.4
