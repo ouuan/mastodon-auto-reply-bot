@@ -13,7 +13,7 @@ specifiers:
   typescript: 4.9.5
   unbuild: 1.1.2
   yaml: 2.2.1
-  zod: 3.20.6
+  zod: 3.21.4
   zod-validation-error: 1.0.1
 
 dependencies:
@@ -22,8 +22,8 @@ dependencies:
   sleep-promise: 9.1.0
   ts-exhaustive-check: 1.0.0
   yaml: 2.2.1
-  zod: 3.20.6
-  zod-validation-error: 1.0.1_zod@3.20.6
+  zod: 3.21.4
+  zod-validation-error: 1.0.1_zod@3.21.4
 
 devDependencies:
   '@ouuan/eslint-config-ts': 1.2.4_ycpbpc6yetojsgtrx3mwntkhsu
@@ -2746,15 +2746,15 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zod-validation-error/1.0.1_zod@3.20.6:
+  /zod-validation-error/1.0.1_zod@3.21.4:
     resolution: {integrity: sha512-QRk2AtHLJg8sCZAbEjXSs7E0n4/mSdX5caoh6eOUvDSdcIQz03i0xoNN1Qx6UZT+ADVHRK6+ZXRtldzW6nnltA==}
     engines: {node: ^14.17 || >=16.0.0}
     peerDependencies:
       zod: ^3.18.0
     dependencies:
-      zod: 3.20.6
+      zod: 3.21.4
     dev: false
 
-  /zod/3.20.6:
-    resolution: {integrity: sha512-oyu0m54SGCtzh6EClBVqDDlAYRz4jrVtKwQ7ZnsEmMI9HnzuZFj8QFwAY1M5uniIYACdGvv0PBWPF2kO0aNofA==}
+  /zod/3.21.4:
+    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
     dev: false
