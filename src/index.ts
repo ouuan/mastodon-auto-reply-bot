@@ -75,7 +75,7 @@ async function main() {
 
   const { url, accessToken, rules } = parseResult.data;
 
-  const { v1: masto } = await login({ url, accessToken });
+  const { v1: masto } = await login({ url, accessToken, disableVersionCheck: true });
 
   const stream = await masto.stream.streamCommunityTimeline();
 
