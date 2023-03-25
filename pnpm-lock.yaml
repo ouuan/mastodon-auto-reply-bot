@@ -14,7 +14,7 @@ specifiers:
   unbuild: 1.1.2
   yaml: 2.2.1
   zod: 3.21.4
-  zod-validation-error: 1.0.1
+  zod-validation-error: 1.1.0
 
 dependencies:
   async: 3.2.4
@@ -23,7 +23,7 @@ dependencies:
   ts-exhaustive-check: 1.0.0
   yaml: 2.2.1
   zod: 3.21.4
-  zod-validation-error: 1.0.1_zod@3.21.4
+  zod-validation-error: 1.1.0_zod@3.21.4
 
 devDependencies:
   '@ouuan/eslint-config-ts': 1.2.5_vgl77cfdswitgr47lm5swmv43m
@@ -2741,8 +2741,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zod-validation-error/1.0.1_zod@3.21.4:
-    resolution: {integrity: sha512-QRk2AtHLJg8sCZAbEjXSs7E0n4/mSdX5caoh6eOUvDSdcIQz03i0xoNN1Qx6UZT+ADVHRK6+ZXRtldzW6nnltA==}
+  /zod-validation-error/1.1.0_zod@3.21.4:
+    resolution: {integrity: sha512-CI0zGWQjyDN0sLcmFiD+wnvkkJaLo6hNB4JBUDltkl6+CeHfnnQKU4Ff6ktMc+VmO/j2+vtLlx4S5xaw8YQN6A==}
     engines: {node: ^14.17 || >=16.0.0}
     peerDependencies:
       zod: ^3.18.0
