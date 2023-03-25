@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { login, Status } from 'masto';
+import { login, mastodon } from 'masto';
 import yaml from 'yaml';
 import { readFile } from 'fs/promises';
 import { fromZodError } from 'zod-validation-error';
@@ -41,7 +41,7 @@ function matchNullFilter(value: any) {
   return value === null;
 }
 
-function matchRule(status: Status, rule: Rule) {
+function matchRule(status: mastodon.v1.Status, rule: Rule) {
   for (const filter of rule.filters) {
     const value = access(status, filter.path);
     const { invert } = filter;
@@ -75,7 +75,7 @@ async function main() {
 
   const { url, accessToken, rules } = parseResult.data;
 
-  const masto = await login({ url, accessToken });
+  const { v1: masto } = await login({ url, accessToken });
 
   const stream = await masto.stream.streamCommunityTimeline();
 
