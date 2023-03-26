@@ -4,7 +4,7 @@ specifiers:
   '@ouuan/eslint-config-ts': 1.2.5
   '@ouuan/tsconfig-base': 0.3.0
   '@types/async': 3.2.18
-  '@types/node': 18.15.9
+  '@types/node': 18.15.10
   async: 3.2.4
   eslint: 8.36.0
   masto: 5.10.0
@@ -29,7 +29,7 @@ devDependencies:
   '@ouuan/eslint-config-ts': 1.2.5_vgl77cfdswitgr47lm5swmv43m
   '@ouuan/tsconfig-base': 0.3.0
   '@types/async': 3.2.18
-  '@types/node': 18.15.9
+  '@types/node': 18.15.10
   eslint: 8.36.0
   typescript: 4.9.5
   unbuild: 1.1.2
@@ -539,7 +539,7 @@ packages:
   /@mastojs/ponyfills/1.0.4:
     resolution: {integrity: sha512-1NaIGmcU7OmyNzx0fk+cYeGTkdXlOJOSdetaC4pStVWsrhht2cdlYSAfe5NDW3FcUmcEm2vVceB9lcClN1RCxw==}
     dependencies:
-      '@types/node': 18.15.9
+      '@types/node': 18.15.10
       '@types/node-fetch': 2.6.2
       abort-controller: 3.0.0
       form-data: 4.0.0
@@ -707,12 +707,12 @@ packages:
   /@types/node-fetch/2.6.2:
     resolution: {integrity: sha512-DHqhlq5jeESLy19TYhLakJ07kNumXWjcDdxXsLUMJZ6ue8VZJj4kLPQVE/2mdHh3xZziNF1xppu5lwmS53HR+A==}
     dependencies:
-      '@types/node': 18.15.9
+      '@types/node': 18.15.10
       form-data: 3.0.1
     dev: false
 
-  /@types/node/18.15.9:
-    resolution: {integrity: sha512-dUxhiNzBLr6IqlZXz6e/rN2YQXlFgOei/Dxy+e3cyXTJ4txSUbGT2/fmnD6zd/75jDMeW5bDee+YXxlFKHoV0A==}
+  /@types/node/18.15.10:
+    resolution: {integrity: sha512-9avDaQJczATcXgfmMAW3MIWArOO7A+m90vuCFLr8AotWf8igO/mRoYukrk2cqZVtv38tHs33retzHEilM7FpeQ==}
 
   /@types/resolve/1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
