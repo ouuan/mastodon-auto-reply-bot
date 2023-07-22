@@ -9,8 +9,8 @@ dependencies:
     specifier: 3.2.4
     version: 3.2.4
   masto:
-    specifier: 5.11.3
-    version: 5.11.3
+    specifier: 5.11.4
+    version: 5.11.4
   sleep-promise:
     specifier: 9.1.0
     version: 9.1.0
@@ -2090,8 +2090,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /masto@5.11.3:
-    resolution: {integrity: sha512-GtSnrqm5fHPaaU0iwag4LCmvpp82rDng6yOZinmOJHHlUfo6Gnq5QY6x3lJCxCnsPIXpTu1yaX42bWrSQyoQPA==}
+  /masto@5.11.4:
+    resolution: {integrity: sha512-sLF3SJTNZDAP57Y+8vAdd1KQTuWWxmGUrBF1R2GLPL6zij/1wXxV05+h8GZhnfg+696arkt+w6ZlKvEEfH1yvg==}
     dependencies:
       '@mastojs/ponyfills': 1.0.4
       change-case: 4.1.2
