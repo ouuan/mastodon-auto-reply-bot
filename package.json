@@ -27,7 +27,7 @@
     "@ouuan/eslint-config-ts": "1.2.5",
     "@ouuan/tsconfig-base": "1.1.0",
     "@types/async": "3.2.20",
-    "@types/node": "18.17.11",
+    "@types/node": "18.17.15",
     "eslint": "8.48.0",
     "typescript": "5.2.2",
     "unbuild": "2.0.0"
