@@ -32,8 +32,8 @@ devDependencies:
     specifier: 1.2.5
     version: 1.2.5(eslint@8.49.0)(typescript@5.2.2)
   '@ouuan/tsconfig-base':
-    specifier: 1.1.0
-    version: 1.1.0
+    specifier: 1.1.1
+    version: 1.1.1
   '@types/async':
     specifier: 3.2.20
     version: 3.2.20
@@ -808,12 +808,12 @@ packages:
       - supports-color
     dev: true
 
-  /@ouuan/tsconfig-base@1.1.0:
-    resolution: {integrity: sha512-XaqUpvM0qPtBZcRbpakqb7mrvWVjherTOEU5akDbwcfFem0NokRCog8c5g6MHSKCf2ywwCgFCAROQ4D6/fLMgw==}
+  /@ouuan/tsconfig-base@1.1.1:
+    resolution: {integrity: sha512-kWSdYffb1IEVeoijKyY1SDkKcRjT0+BsfefNMvO49kDel3Yza+JgA3UjIjEFdNfk8hJlu9R2YGZRlQDB1SIFKQ==}
     dependencies:
-      '@tsconfig/esm': 1.0.3
-      '@tsconfig/node-lts': 18.12.2
-      '@tsconfig/strictest': 2.0.1
+      '@tsconfig/esm': 1.0.4
+      '@tsconfig/node-lts': 18.12.5
+      '@tsconfig/strictest': 2.0.2
     dev: true
 
   /@rollup/plugin-alias@5.0.0(rollup@3.28.1):
@@ -907,16 +907,17 @@ packages:
       rollup: 3.28.1
     dev: true
 
-  /@tsconfig/esm@1.0.3:
-    resolution: {integrity: sha512-Gp56rIc3R8ab032nXMUitmc7YIb4nAi8DQ6Qt47tuL0Ssn9LIOm+o2FQmqPu3jX4z0TsqgzWwkmVygxcq+yHYg==}
+  /@tsconfig/esm@1.0.4:
+    resolution: {integrity: sha512-bix9CWljCxyD06nGQRDYdmTw0wevvEDyrLKjbDocGV31JQYbfqqgMV1yFeJ9aDgorKQ9yDLrak8poiggsB5Liw==}
+    deprecated: Use the tsconfig base for your runtime instead of general 'esm', e.g. 'node18'
     dev: true
 
-  /@tsconfig/node-lts@18.12.2:
-    resolution: {integrity: sha512-1zbWpsZkChnemJsRm+G2EyjuPueNPkjBEfp08ET1uCv0CUL/5AK1IZvFtEsw7ZyEqojIydye3mwt6k8isULj4A==}
+  /@tsconfig/node-lts@18.12.5:
+    resolution: {integrity: sha512-KJZX0kQ5FBv77WDVzmQ9y1dUjaJCNXAAz3LSsg5cMwH0AUijVdDQtII+IVprEXdb13U9GjVOBxBzyRvr/ozPxw==}
     dev: true
 
-  /@tsconfig/strictest@2.0.1:
-    resolution: {integrity: sha512-7JHHCbyCsGUxLd0pDbp24yz3zjxw2t673W5oAP6HCEdr/UUhaRhYd3SSnUsGCk+VnPVJVA4mXROzbhI+nyIk+w==}
+  /@tsconfig/strictest@2.0.2:
+    resolution: {integrity: sha512-jt4jIsWKvUvuY6adJnQJlb/UR7DdjC8CjHI/OaSQruj2yX9/K6+KOvDt/vD6udqos/FUk5Op66CvYT7TBLYO5Q==}
     dev: true
 
   /@types/async@3.2.20:
