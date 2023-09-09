@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@ouuan/eslint-config-ts": "1.2.5",
-    "@ouuan/tsconfig-base": "1.1.0",
+    "@ouuan/tsconfig-base": "1.1.1",
     "@types/async": "3.2.20",
     "@types/node": "18.17.15",
     "eslint": "8.49.0",
