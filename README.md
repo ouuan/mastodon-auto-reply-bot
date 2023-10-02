@@ -30,6 +30,12 @@ rules:
       - path: content  # path in the Status API entity
         type: string
         match: bot
+      - path: tags
+        type: array
+        contains:  # array contains subfilters
+          - path: name
+            type: string
+            match: auto-reply
     reply: Hello! I'm an auto-reply bot.
     at: false  # no @username in the reply
   - filters:

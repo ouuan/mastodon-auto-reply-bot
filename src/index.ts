@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { login, mastodon } from 'masto';
+import { login } from 'masto';
 import yaml from 'yaml';
 import { readFile } from 'fs/promises';
 import { fromZodError } from 'zod-validation-error';
@@ -13,6 +13,7 @@ import {
   StringFilter,
   NumberFilter,
   BooleanFilter,
+  ArrayFilter,
 } from './schema';
 import { access } from './utils';
 
@@ -41,9 +42,17 @@ function matchNullFilter(value: any) {
   return value === null;
 }
 
-function matchRule(status: mastodon.v1.Status, rule: Rule) {
-  for (const filter of rule.filters) {
-    const value = access(status, filter.path);
+function matchArrayFilter(value: any, filter: ArrayFilter) {
+  if (!Array.isArray(value)) {
+    return false;
+  }
+  // eslint-disable-next-line @typescript-eslint/no-use-before-define
+  return value.some((item) => matchFilters(item, filter.contains));
+}
+
+function matchFilters(root: any, filters: Rule['filters']) {
+  for (const filter of filters) {
+    const value = access(root, filter.path);
     const { invert } = filter;
     switch (filter.type) {
       case 'string':
@@ -57,6 +66,9 @@ function matchRule(status: mastodon.v1.Status, rule: Rule) {
         break;
       case 'null':
         if (matchNullFilter(value) === invert) return false;
+        break;
+      case 'array':
+        if (matchArrayFilter(value, filter) === invert) return false;
         break;
       default:
         exhaustiveCheck(filter);
@@ -94,7 +106,7 @@ async function main() {
   stream.on('update', async (status) => {
     console.log(`status received: ${status.id}`);
     for (const rule of rules) {
-      if (matchRule(status, rule)) {
+      if (matchFilters(status, rule.filters)) {
         queue.push({
           status: `${rule.at ? `@${status.account.acct} ` : ''}${rule.reply}`,
           inReplyToId: status.id,

@@ -27,12 +27,23 @@ export const NullFilter = BaseFilter.extend({
   type: z.literal('null'),
 });
 
+export const ArrayFilter = BaseFilter.extend({
+  type: z.literal('array'),
+  contains: z.array(z.discriminatedUnion('type', [
+    StringFilter,
+    NumberFilter,
+    BooleanFilter,
+    NullFilter,
+  ])),
+});
+
 export const Rule = z.object({
   filters: z.array(z.discriminatedUnion('type', [
     StringFilter,
     NumberFilter,
     BooleanFilter,
     NullFilter,
+    ArrayFilter,
   ])),
   reply: z.string(),
   visibility: z.enum(['public', 'unlisted', 'private', 'direct']).default('public'),
@@ -49,5 +60,6 @@ export type StringFilter = z.infer<typeof StringFilter>;
 export type NumberFilter = z.infer<typeof NumberFilter>;
 export type BooleanFilter = z.infer<typeof BooleanFilter>;
 export type NullFilter = z.infer<typeof NullFilter>;
+export type ArrayFilter = z.infer<typeof ArrayFilter>;
 export type Rule = z.infer<typeof Rule>;
 export type Config = z.infer<typeof Config>;
