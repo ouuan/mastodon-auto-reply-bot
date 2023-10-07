@@ -20,7 +20,11 @@ node .
 
 ## Config
 
-Example `config.yml`: (See also [Status - Mastodon documentation](https://docs.joinmastodon.org/entities/Status/) and [Status | masto](https://neet.github.io/masto.js/interfaces/Status.html))
+See [schema.ts](src/schema.ts) for config schema.
+
+See [Status - Mastodon documentation](https://docs.joinmastodon.org/entities/Status/) and [Status | masto](https://neet.github.io/masto.js/interfaces/mastodon.v1.Status.html) for the `Status` object used in filters.
+
+Example `config.yml`:
 
 ```yaml
 url: https://mastodon.social/
