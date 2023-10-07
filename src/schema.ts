@@ -52,6 +52,7 @@ export const Rule = z.object({
 
 export const Config = z.object({
   url: z.string().url(),
+  streamingApiUrl: z.string().url(),
   accessToken: z.string(),
   rules: z.array(Rule),
 });

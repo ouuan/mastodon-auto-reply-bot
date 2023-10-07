@@ -24,6 +24,7 @@ Example `config.yml`: (See also [Status - Mastodon documentation](https://docs.j
 
 ```yaml
 url: https://mastodon.social/
+streamingApiUrl: wss://mastodon.social/
 accessToken: TOKEN
 rules:
   - filters:

@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { login } from 'masto';
+import { createStreamingAPIClient, createRestAPIClient } from 'masto';
 import yaml from 'yaml';
 import { readFile } from 'fs/promises';
 import { fromZodError } from 'zod-validation-error';
@@ -85,17 +85,25 @@ async function main() {
     process.exit(1);
   }
 
-  const { url, accessToken, rules } = parseResult.data;
+  const {
+    url,
+    streamingApiUrl,
+    accessToken,
+    rules,
+  } = parseResult.data;
 
-  const { v1: masto } = await login({ url, accessToken, disableVersionCheck: true });
+  const { v1: rest } = createRestAPIClient({ url, accessToken });
 
-  const stream = await masto.stream.streamCommunityTimeline();
+  const stream = createStreamingAPIClient({
+    streamingApiUrl,
+    accessToken,
+  }).public.local.subscribe();
 
   console.log('Connected');
 
-  const queue = async.queue(async (reply: Parameters<typeof masto.statuses.create>[0]) => {
+  const queue = async.queue(async (reply: Parameters<typeof rest.statuses.create>[0]) => {
     try {
-      const replyStatus = await masto.statuses.create(reply);
+      const replyStatus = await rest.statuses.create(reply);
       console.log(`replied ${replyStatus.id} to ${reply.inReplyToId}: ${reply.status}`);
     } catch (e) {
       console.error(`failed to reply to ${reply.inReplyToId}: ${e}`);
@@ -103,19 +111,27 @@ async function main() {
     await sleep(10000); // avoid replying too fast
   });
 
-  stream.on('update', async (status) => {
-    console.log(`status received: ${status.id}`);
-    for (const rule of rules) {
-      if (matchFilters(status, rule.filters)) {
-        queue.push({
-          status: `${rule.at ? `@${status.account.acct} ` : ''}${rule.reply}`,
-          inReplyToId: status.id,
-          visibility: rule.visibility,
-        });
+  for await (const event of stream) {
+    switch (event.event) {
+      case 'update': {
+        const status = event.payload;
+        console.log(`status received: ${status.id}`);
+        for (const rule of rules) {
+          if (matchFilters(status, rule.filters)) {
+            queue.push({
+              status: `${rule.at ? `@${status.account.acct} ` : ''}${rule.reply}`,
+              inReplyToId: status.id,
+              visibility: rule.visibility,
+            });
+            break;
+          }
+        }
         break;
       }
+      default:
+        break;
     }
-  });
+  }
 }
 
 main().catch((e) => {
