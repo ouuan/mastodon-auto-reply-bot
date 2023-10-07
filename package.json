@@ -20,7 +20,7 @@
     "sleep-promise": "9.1.0",
     "ts-exhaustive-check": "1.0.0",
     "yaml": "2.3.2",
-    "zod": "3.22.2",
+    "zod": "3.22.4",
     "zod-validation-error": "1.5.0"
   },
   "devDependencies": {
