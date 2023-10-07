@@ -35,11 +35,11 @@ devDependencies:
     specifier: 1.1.1
     version: 1.1.1
   '@types/async':
-    specifier: 3.2.20
-    version: 3.2.20
+    specifier: 3.2.21
+    version: 3.2.21
   '@types/node':
-    specifier: 18.17.15
-    version: 18.17.15
+    specifier: 18.18.4
+    version: 18.18.4
   eslint:
     specifier: 8.49.0
     version: 8.49.0
@@ -760,7 +760,7 @@ packages:
   /@mastojs/ponyfills@1.0.4:
     resolution: {integrity: sha512-1NaIGmcU7OmyNzx0fk+cYeGTkdXlOJOSdetaC4pStVWsrhht2cdlYSAfe5NDW3FcUmcEm2vVceB9lcClN1RCxw==}
     dependencies:
-      '@types/node': 18.17.15
+      '@types/node': 18.18.4
       '@types/node-fetch': 2.6.2
       abort-controller: 3.0.0
       form-data: 4.0.0
@@ -920,8 +920,8 @@ packages:
     resolution: {integrity: sha512-jt4jIsWKvUvuY6adJnQJlb/UR7DdjC8CjHI/OaSQruj2yX9/K6+KOvDt/vD6udqos/FUk5Op66CvYT7TBLYO5Q==}
     dev: true
 
-  /@types/async@3.2.20:
-    resolution: {integrity: sha512-6jSBQQugzyX1aWto0CbvOnmxrU9tMoXfA9gc4IrLEtvr3dTwSg5GLGoWiZnGLI6UG/kqpB3JOQKQrqnhUWGKQA==}
+  /@types/async@3.2.21:
+    resolution: {integrity: sha512-msYM0OYxzkwpiDJZZDo7XsYuFIpiAOh+o3hygudSpSzeW+R0DAEKZvdQriHYT95m9CvscLDg5s0Mxlrlhoy2qw==}
     dev: true
 
   /@types/estree@1.0.0:
@@ -939,12 +939,12 @@ packages:
   /@types/node-fetch@2.6.2:
     resolution: {integrity: sha512-DHqhlq5jeESLy19TYhLakJ07kNumXWjcDdxXsLUMJZ6ue8VZJj4kLPQVE/2mdHh3xZziNF1xppu5lwmS53HR+A==}
     dependencies:
-      '@types/node': 18.17.15
+      '@types/node': 18.18.4
       form-data: 3.0.1
     dev: false
 
-  /@types/node@18.17.15:
-    resolution: {integrity: sha512-2yrWpBk32tvV/JAd3HNHWuZn/VDN1P+72hWirHnvsvTGSqbANi+kSeuQR9yAHnbvaBvHDsoTdXV0Fe+iRtHLKA==}
+  /@types/node@18.18.4:
+    resolution: {integrity: sha512-t3rNFBgJRugIhackit2mVcLfF6IRc0JE4oeizPQL8Zrm8n2WY/0wOdpOPhdtG0V9Q2TlW/axbF1MJ6z+Yj/kKQ==}
 
   /@types/resolve@1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
