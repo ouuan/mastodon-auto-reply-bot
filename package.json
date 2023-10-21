@@ -16,10 +16,10 @@
   },
   "dependencies": {
     "async": "3.2.4",
-    "masto": "6.3.1",
+    "masto": "6.3.2",
     "sleep-promise": "9.1.0",
     "ts-exhaustive-check": "1.0.0",
-    "yaml": "2.3.2",
+    "yaml": "2.3.3",
     "zod": "3.22.4",
     "zod-validation-error": "1.5.0"
   },

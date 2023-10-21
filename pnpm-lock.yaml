@@ -9,8 +9,8 @@ dependencies:
     specifier: 3.2.4
     version: 3.2.4
   masto:
-    specifier: 6.3.1
-    version: 6.3.1
+    specifier: 6.3.2
+    version: 6.3.2
   sleep-promise:
     specifier: 9.1.0
     version: 9.1.0
@@ -18,8 +18,8 @@ dependencies:
     specifier: 1.0.0
     version: 1.0.0
   yaml:
-    specifier: 2.3.2
-    version: 2.3.2
+    specifier: 2.3.3
+    version: 2.3.3
   zod:
     specifier: 3.22.4
     version: 3.22.4
@@ -2278,8 +2278,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /masto@6.3.1:
-    resolution: {integrity: sha512-Os3MlbGFNL6KHxlKldYY+d/1exO6oBjtF4vx8d6cmXRmeeeW3mKQeunTZz+yY5qWksPg2eVdk+FOhaEnOeclVw==}
+  /masto@6.3.2:
+    resolution: {integrity: sha512-+wqEy5fOgt3jGPcxXgJIB1nehxHAwzkDbPYvM2mf5dwcWPZ2dnk7rH/Dy2s+H9Jv0QDy9hiRlWWCNN06SF95HQ==}
     dependencies:
       change-case: 4.1.2
       events-to-async: 2.0.0
@@ -2956,8 +2956,8 @@ packages:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
     dev: true
 
-  /yaml@2.3.2:
-    resolution: {integrity: sha512-N/lyzTPaJasoDmfV7YTrYCI0G/3ivm/9wdG0aHuheKowWQwGTsK0Eoiw6utmzAnI6pkJa0DUVygvp3spqqEKXg==}
+  /yaml@2.3.3:
+    resolution: {integrity: sha512-zw0VAJxgeZ6+++/su5AFoqBbZbrEakwu+X0M5HmcwUiBL7AzcuPKjj5we4xfQLp78LkEMpD0cOnUhmgOVy3KdQ==}
     engines: {node: '>= 14'}
     dev: false
 
