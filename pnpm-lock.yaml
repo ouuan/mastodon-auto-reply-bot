@@ -9,8 +9,8 @@ dependencies:
     specifier: 3.2.5
     version: 3.2.5
   masto:
-    specifier: 6.3.3
-    version: 6.3.3
+    specifier: 6.4.2
+    version: 6.4.2
   sleep-promise:
     specifier: 9.1.0
     version: 9.1.0
@@ -1732,8 +1732,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /events-to-async@2.0.0:
-    resolution: {integrity: sha512-NiZEr4g51nI4/lz/6NdwMqK/TLIctlnp9TQ3wCJjlRp47VgrthUZE4nrk2UhfZ8VzoQ/Xyth+G6MKioLCt0FVA==}
+  /events-to-async@2.0.1:
+    resolution: {integrity: sha512-RtnLYrMbXp4JkZIoZu+3VTqV21bNVBlJBZ4NmtwvMNqSE3qouhxv2gvLE4JJDaQc54ioPkrX74V6x+hp/hqjkQ==}
     dev: false
 
   /fast-deep-equal@3.1.3:
@@ -2285,11 +2285,11 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /masto@6.3.3:
-    resolution: {integrity: sha512-hmDsiscImeZfpkS+5oEWk3w5mkbxERFKN/UpuaoKZpVWWoGWCNnO7iPfQHygs/phP7PQqS6pVHlE5ylqSylf6A==}
+  /masto@6.4.2:
+    resolution: {integrity: sha512-aIxhsTkl0pc755Sf9NMuglY0VM9HuU/tec60e4oLsyyzAkE7ELwufh6anErO84n8g3eWu/u0LGucTujIiDaAhg==}
     dependencies:
       change-case: 4.1.2
-      events-to-async: 2.0.0
+      events-to-async: 2.0.1
       isomorphic-ws: 5.0.0(ws@8.13.0)
       ts-custom-error: 3.3.1
       ws: 8.13.0
