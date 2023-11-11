@@ -15,11 +15,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "async": "3.2.4",
+    "async": "3.2.5",
     "masto": "6.3.3",
     "sleep-promise": "9.1.0",
     "ts-exhaustive-check": "1.0.0",
-    "yaml": "2.3.3",
+    "yaml": "2.3.4",
     "zod": "3.22.4",
     "zod-validation-error": "1.5.0"
   },
