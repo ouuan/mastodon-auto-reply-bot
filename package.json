@@ -28,7 +28,7 @@
     "@ouuan/tsconfig-base": "1.1.1",
     "@types/async": "3.2.24",
     "@types/node": "20.10.4",
-    "eslint": "8.54.0",
+    "eslint": "8.55.0",
     "typescript": "5.3.3",
     "unbuild": "2.0.0"
   }
