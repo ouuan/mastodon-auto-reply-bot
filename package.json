@@ -21,7 +21,7 @@
     "ts-exhaustive-check": "1.0.0",
     "yaml": "2.3.4",
     "zod": "3.22.4",
-    "zod-validation-error": "2.1.0"
+    "zod-validation-error": "3.0.0"
   },
   "devDependencies": {
     "@ouuan/eslint-config-ts": "1.2.5",
