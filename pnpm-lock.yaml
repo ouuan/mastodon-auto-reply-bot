@@ -24,8 +24,8 @@ dependencies:
     specifier: 3.22.4
     version: 3.22.4
   zod-validation-error:
-    specifier: 3.0.0
-    version: 3.0.0(zod@3.22.4)
+    specifier: 3.0.2
+    version: 3.0.2(zod@3.22.4)
 
 devDependencies:
   '@ouuan/eslint-config-ts':
@@ -38,8 +38,8 @@ devDependencies:
     specifier: 3.2.24
     version: 3.2.24
   '@types/node':
-    specifier: 20.11.17
-    version: 20.11.17
+    specifier: 20.11.20
+    version: 20.11.20
   eslint:
     specifier: 8.57.0
     version: 8.57.0
@@ -924,8 +924,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node@20.11.17:
-    resolution: {integrity: sha512-QmgQZGWu1Yw9TDyAP9ZzpFJKynYNeOvwMJmaxABfieQoVoiVOS6MN1WSpqpRcbeA5+RW82kraAVxCCJg+780Qw==}
+  /@types/node@20.11.20:
+    resolution: {integrity: sha512-7/rR21OS+fq8IyHTgtLkDK949uzsa6n8BkziAKtPVpugIkO6D+/ooXMvzXxDnZrmtXVfjb1bKQafYpb8s89LOg==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -2977,8 +2977,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zod-validation-error@3.0.0(zod@3.22.4):
-    resolution: {integrity: sha512-x+agsJJG9rvC7axF0xqTEdZhJkLHyIZkdOAWDJSmwGPzxNHMHwtU6w2yDOAAP6yuSfTAUhAMJRBfhVGY64ySEQ==}
+  /zod-validation-error@3.0.2(zod@3.22.4):
+    resolution: {integrity: sha512-21xGaDmnU7lJZ4J63n5GXWqi+rTzGy3gDHbuZ1jP6xrK/DEQGyOqs/xW7eH96tIfCOYm+ecCuT0bfajBRKEVUw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       zod: ^3.18.0
