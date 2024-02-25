@@ -9,8 +9,8 @@ dependencies:
     specifier: 3.2.5
     version: 3.2.5
   masto:
-    specifier: 6.5.2
-    version: 6.5.2
+    specifier: 6.6.1
+    version: 6.6.1
   sleep-promise:
     specifier: 9.1.0
     version: 9.1.0
@@ -2169,12 +2169,12 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /isomorphic-ws@5.0.0(ws@8.13.0):
+  /isomorphic-ws@5.0.0(ws@8.16.0):
     resolution: {integrity: sha512-muId7Zzn9ywDsyXgTIafTry2sV3nySZeUDe6YedVd1Hvuuep5AsIlqK+XefWpYTyJG5e503F2xIuT2lcU6rCSw==}
     peerDependencies:
       ws: '*'
     dependencies:
-      ws: 8.13.0
+      ws: 8.16.0
     dev: false
 
   /jiti@1.19.3:
@@ -2285,14 +2285,14 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /masto@6.5.2:
-    resolution: {integrity: sha512-JfnG7MSQmhszWnLsvdBuxXc2tcVUyCvlTxnSH/5S+In4dU1tvc1wGhFR87kO+YW8gfDsDw9CHh+AD/z+DbTTfQ==}
+  /masto@6.6.1:
+    resolution: {integrity: sha512-eLTOvOueBaT8dhbksJ5Z0hcXTDBhkYOoxM6Uhyissvh2OBFqlMZ4IWgZ6xoGUxOQqTBdTva/1Bw8NfufGgkUwg==}
     dependencies:
       change-case: 4.1.2
       events-to-async: 2.0.1
-      isomorphic-ws: 5.0.0(ws@8.13.0)
+      isomorphic-ws: 5.0.0(ws@8.16.0)
       ts-custom-error: 3.3.1
-      ws: 8.13.0
+      ws: 8.16.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -2946,8 +2946,8 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /ws@8.13.0:
-    resolution: {integrity: sha512-x9vcZYTrFPC7aSIbj7sRCYo7L/Xb8Iy+pW0ng0wt2vCJv7M9HOMy0UoN3rr+IFC7hb7vXoqS+P9ktyLLLhO+LA==}
+  /ws@8.16.0:
+    resolution: {integrity: sha512-HS0c//TP7Ina87TfiPUz1rQzMhHrl/SG2guqRcTOIUYD2q8uhUdNHZYJUaQ8aTGPzCh+c6oawMKW35nFl1dxyQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
