@@ -9,8 +9,8 @@ dependencies:
     specifier: 3.2.5
     version: 3.2.5
   masto:
-    specifier: 6.7.1
-    version: 6.7.1
+    specifier: 6.7.2
+    version: 6.7.2
   sleep-promise:
     specifier: 9.1.0
     version: 9.1.0
@@ -2358,8 +2358,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /masto@6.7.1:
-    resolution: {integrity: sha512-iFfI5pFercwQ4lWe2zX9OPImBeaLDERwqqkBbbFN4ZnuV3oMkIY++MQJEnInRCPmMbshNhOJyHD533LldUy0Qg==}
+  /masto@6.7.2:
+    resolution: {integrity: sha512-MEX/XDWLJyOjCOedhGZaIsrTIH9yIA1k+z2ySJkClIfphtv8DTulBpcpi8CnBMCvgR/RjAF/wdu3QL5p6BVe2A==}
     dependencies:
       change-case: 4.1.2
       events-to-async: 2.0.1
