@@ -27,8 +27,8 @@ importers:
         specifier: 3.23.4
         version: 3.23.4
       zod-validation-error:
-        specifier: 3.1.0
-        version: 3.1.0(zod@3.23.4)
+        specifier: 3.2.0
+        version: 3.2.0(zod@3.23.4)
     devDependencies:
       '@ouuan/eslint-config-ts':
         specifier: 1.2.5
@@ -1689,8 +1689,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod-validation-error@3.1.0:
-    resolution: {integrity: sha512-zujS6HqJjMZCsvjfbnRs7WI3PXN39ovTcY1n8a+KTm4kOH0ZXYsNiJkH1odZf4xZKMkBDL7M2rmQ913FCS1p9w==}
+  zod-validation-error@3.2.0:
+    resolution: {integrity: sha512-cYlPR6zuyrgmu2wRTdumEAJGuwI7eHVHGT+VyneAQxmRAKtGRL1/7pjz4wfLhz4J05f5qoSZc3rGacswgyTjjw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       zod: ^3.18.0
@@ -3404,7 +3404,7 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod-validation-error@3.1.0(zod@3.23.4):
+  zod-validation-error@3.2.0(zod@3.23.4):
     dependencies:
       zod: 3.23.4
 
