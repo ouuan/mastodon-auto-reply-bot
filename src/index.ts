@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { createStreamingAPIClient, createRestAPIClient } from 'masto';
 import yaml from 'yaml';
 import { readFile } from 'fs/promises';
@@ -16,6 +15,11 @@ import {
   ArrayFilter,
 } from './schema';
 import { access } from './utils';
+
+function log(s: any) {
+  /* eslint-disable-next-line no-console */
+  console.log(`${new Date().toISOString()}  ${s}`);
+}
 
 function matchStringFilter(value: any, filter: StringFilter) {
   return typeof value === 'string' && new RegExp(filter.match).test(value);
@@ -81,7 +85,7 @@ async function main() {
   const parseResult = Config.safeParse(yaml.parse(await readFile('config.yml', 'utf-8')));
 
   if (!parseResult.success) {
-    console.error(fromZodError(parseResult.error));
+    log(fromZodError(parseResult.error));
     process.exit(1);
   }
 
@@ -99,23 +103,23 @@ async function main() {
     accessToken,
   }).public.local.subscribe();
 
-  console.log('Connected');
+  log('Connected');
 
   const queue = async.queue(async (reply: Parameters<typeof rest.statuses.create>[0]) => {
     try {
       const replyStatus = await rest.statuses.create(reply);
-      console.log(`replied ${replyStatus.id} to ${reply.inReplyToId}: ${reply.status}`);
+      log(`replied ${replyStatus.id} to ${reply.inReplyToId}: ${reply.status}`);
     } catch (e) {
-      console.error(`failed to reply to ${reply.inReplyToId}: ${e}`);
+      log(`failed to reply to ${reply.inReplyToId}: ${e}`);
     }
-    await sleep(10000); // avoid replying too fast
+    await sleep(60000); // avoid replying too fast
   });
 
   for await (const event of stream) {
     switch (event.event) {
       case 'update': {
         const status = event.payload;
-        console.log(`status received: ${status.id}`);
+        log(`status received: ${status.id}`);
         for (const rule of rules) {
           if (matchFilters(status, rule.filters)) {
             queue.push({
@@ -134,7 +138,11 @@ async function main() {
   }
 }
 
+setInterval(() => {
+  log('heartbeat');
+}, 3600_000);
+
 main().catch((e) => {
-  console.error(e);
+  log(e);
   process.exit(2);
 });
