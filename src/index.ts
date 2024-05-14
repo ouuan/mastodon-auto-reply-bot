@@ -136,6 +136,8 @@ async function main() {
         break;
     }
   }
+
+  throw new Error('stream closed');
 }
 
 setInterval(() => {
