@@ -12,8 +12,8 @@ importers:
         specifier: 3.2.5
         version: 3.2.5
       masto:
-        specifier: 6.7.7
-        version: 6.7.7
+        specifier: 6.8.0
+        version: 6.8.0
       sleep-promise:
         specifier: 9.1.0
         version: 9.1.0
@@ -1160,10 +1160,12 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@8.0.3:
     resolution: {integrity: sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==}
     engines: {node: '>=12'}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   globals@11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
@@ -1442,8 +1444,8 @@ packages:
     resolution: {integrity: sha512-B7xGbll2fG/VjP+SWg4sX3JynwIU0mjoTc6MPpKNuIvftk6u6vqhDnk1R80b8C2GBR6ywqy+1DcKBrevBg+bmw==}
     engines: {node: '>=12'}
 
-  masto@6.7.7:
-    resolution: {integrity: sha512-iu9pWcBfyJO+GXgmZQo8/nSS2N3p5FYSiR+gZNDMT/LMUZgA9Pmr/YeGgn4uqoz/rllQtFm2W/+1v1Etr4b1pA==}
+  masto@6.8.0:
+    resolution: {integrity: sha512-amooNsp4mebu/dtBZfUHP6I0mcHSDB0JoTyrCWdw2YcCOIuPX6bM0gA60nEaLZqoHSF7xG63TpdDbAYI37Fnlg==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -1647,6 +1649,7 @@ packages:
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rollup-plugin-dts@6.0.0:
@@ -3447,7 +3450,7 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  masto@6.7.7:
+  masto@6.8.0:
     dependencies:
       change-case: 4.1.2
       events-to-async: 2.0.1
