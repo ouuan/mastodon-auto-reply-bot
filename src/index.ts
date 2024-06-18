@@ -133,6 +133,7 @@ async function main() {
         break;
       }
       default:
+        log(`timeline event ${event.event}: ${JSON.stringify(event.payload)}`);
         break;
     }
   }
