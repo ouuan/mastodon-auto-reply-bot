@@ -14,7 +14,7 @@ jobs:
         with:
           username: ouuan
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - uses: docker/build-push-action@v5
+      - uses: docker/build-push-action@v6
         with:
           push: true
           tags: ouuan/mastodon-auto-reply-bot:latest
