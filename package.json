@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "async": "3.2.6",
-    "masto": "6.8.1",
+    "masto": "6.8.2",
     "sleep-promise": "9.1.0",
     "ts-exhaustive-check": "1.0.0",
     "yaml": "2.5.1",
