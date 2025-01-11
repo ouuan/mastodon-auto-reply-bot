@@ -12,8 +12,8 @@ importers:
         specifier: 3.2.6
         version: 3.2.6
       masto:
-        specifier: 6.10.1
-        version: 6.10.1
+        specifier: 6.10.2
+        version: 6.10.2
       sleep-promise:
         specifier: 9.1.0
         version: 9.1.0
@@ -1447,8 +1447,8 @@ packages:
     resolution: {integrity: sha512-B7xGbll2fG/VjP+SWg4sX3JynwIU0mjoTc6MPpKNuIvftk6u6vqhDnk1R80b8C2GBR6ywqy+1DcKBrevBg+bmw==}
     engines: {node: '>=12'}
 
-  masto@6.10.1:
-    resolution: {integrity: sha512-CBEAvWJfMLMgk0cURSGU/fRJDcFEZWo1LBfVYztBNEOyijoedQh4htKaon+XCE4aT7TLYPqOLmcllXwMjOvztA==}
+  masto@6.10.2:
+    resolution: {integrity: sha512-s9yU2AvA/8uhS1OILs1Oa54saO6qEqLR9+uu519DpnQfYdN26TI2PBmedQ4b98zM6Xrd9KSPr2LpHG+oriccVA==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -3453,7 +3453,7 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  masto@6.10.1:
+  masto@6.10.2:
     dependencies:
       change-case: 4.1.2
       events-to-async: 2.0.1
