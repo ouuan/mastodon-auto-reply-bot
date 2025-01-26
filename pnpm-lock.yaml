@@ -34,8 +34,8 @@ importers:
         specifier: 1.3.0
         version: 1.3.0(eslint@8.57.1)(typescript@5.7.3)
       '@ouuan/tsconfig-base':
-        specifier: 1.3.0
-        version: 1.3.0
+        specifier: 1.3.1
+        version: 1.3.1
       '@types/async':
         specifier: 3.2.24
         version: 3.2.24
@@ -369,8 +369,8 @@ packages:
       eslint: '>=8'
       typescript: '>=4'
 
-  '@ouuan/tsconfig-base@1.3.0':
-    resolution: {integrity: sha512-2p4Cr2w7MNkVKwUnkby9POQbh8yziCPZQkHCU01cAX1zvwV5UXNwsPV67RnPbA0BJkdxsTa6de0P/uSwORP7UQ==}
+  '@ouuan/tsconfig-base@1.3.1':
+    resolution: {integrity: sha512-6G6ssGVwMyaohh/DlnsjLgGMpgpbdWZX1TRKa5FlEwA8xXu19ViNmxDKTSYH5tYc2KngLKlIgbrVZUMZUHJYyg==}
 
   '@rollup/plugin-alias@5.1.1':
     resolution: {integrity: sha512-PR9zDb+rOzkRb2VD+EuKB7UC41vU5DIwZ5qqCpk0KJudcWAyi8rvYOhS7+L5aZCspw1stTViLgN5v6FF1p5cgQ==}
@@ -525,12 +525,8 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
 
-  '@tsconfig/esm@1.0.5':
-    resolution: {integrity: sha512-JzoZ0h299JRLPfV5VBsMq1TuMy+OmU9bdV/7NcjfRojL0eIcA1k5ESrtjWrDwJRJnk9B0QmgR0rq04LERbdfWw==}
-    deprecated: this package has been deprecated
-
-  '@tsconfig/node-lts@20.1.3':
-    resolution: {integrity: sha512-m3b7EP2U+h5tNSpaBMfcTuHmHn04wrgRPQQrfKt75YIPq6kPs2153/KfPHdqkEWGx5pEBvS6rnvToT+yTtC1iw==}
+  '@tsconfig/node-lts@22.0.1':
+    resolution: {integrity: sha512-BwlbLiYurZKrj+Pa6etSE1jXmr3VEDdgJto1jEYKcpBVwZZSWVkCPyFEFYbHdIOaFMlSTtV206DYPlT109aqug==}
 
   '@tsconfig/strictest@2.0.5':
     resolution: {integrity: sha512-ec4tjL2Rr0pkZ5hww65c+EEPYwxOi4Ryv+0MtjeaSQRJyq322Q27eOQiFbuNgw2hpL4hB1/W/HBGk3VKS43osg==}
@@ -2446,10 +2442,9 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  '@ouuan/tsconfig-base@1.3.0':
+  '@ouuan/tsconfig-base@1.3.1':
     dependencies:
-      '@tsconfig/esm': 1.0.5
-      '@tsconfig/node-lts': 20.1.3
+      '@tsconfig/node-lts': 22.0.1
       '@tsconfig/strictest': 2.0.5
 
   '@rollup/plugin-alias@5.1.1(rollup@4.30.1)':
@@ -2558,9 +2553,7 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
-  '@tsconfig/esm@1.0.5': {}
-
-  '@tsconfig/node-lts@20.1.3': {}
+  '@tsconfig/node-lts@22.0.1': {}
 
   '@tsconfig/strictest@2.0.5': {}
 
