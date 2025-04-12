@@ -12,8 +12,8 @@ importers:
         specifier: 3.2.6
         version: 3.2.6
       masto:
-        specifier: 6.10.3
-        version: 6.10.3
+        specifier: 6.10.4
+        version: 6.10.4
       sleep-promise:
         specifier: 9.1.0
         version: 9.1.0
@@ -1429,8 +1429,8 @@ packages:
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
-  masto@6.10.3:
-    resolution: {integrity: sha512-/ajJpdH0jXEqEBgSDTzYc4RS5CcDR0AGtweQmWNAaaFagdBHiNtJZHr7xFvdhR88C83qxispIGYNkLaL2GWumg==}
+  masto@6.10.4:
+    resolution: {integrity: sha512-TqIkWaZa884j9jik39efsv6mdpgalUElwiGLLPHevLlIuCSnGjapGC++VovlQvvVV6O5e4ce/gzWNy17cF6PHg==}
 
   mdn-data@2.0.28:
     resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==}
@@ -3495,7 +3495,7 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  masto@6.10.3:
+  masto@6.10.4:
     dependencies:
       change-case: 4.1.2
       events-to-async: 2.0.1
