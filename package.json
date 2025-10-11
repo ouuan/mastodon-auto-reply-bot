@@ -29,7 +29,7 @@
     "@types/async": "3.2.25",
     "@types/node": "22.18.9",
     "eslint": "8.57.1",
-    "typescript": "5.9.2",
+    "typescript": "5.9.3",
     "unbuild": "3.6.1"
   }
 }
