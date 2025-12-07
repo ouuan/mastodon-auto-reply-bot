@@ -19,7 +19,7 @@
     "masto": "6.10.4",
     "sleep-promise": "9.1.0",
     "ts-exhaustive-check": "1.0.0",
-    "yaml": "2.8.1",
+    "yaml": "2.8.2",
     "zod": "3.25.76",
     "zod-validation-error": "3.5.4"
   },
