@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN npm i -g pnpm
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-*.yaml ./
 RUN pnpm i
 
 COPY . .
